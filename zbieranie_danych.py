@@ -19,14 +19,14 @@ def zbieranie_danych():
         lista.append(osoba)
 
         decyzja = input("Czy dodać kolejną osobę? (t/n): ").lower()
-        if decyzja == 'n':
+        if decyzja != 't':
             break
     lista.sort(key=lambda x: x.split()[-1].lower())
 
     agenda = []
 
     while True:
-        punkt = input("Dodaj punkt z porządku obrad (z numerem): ")
+        punkt = input("Dodaj punkt z porządku obrad (z prefiksem, ilość = 2): ")
         agenda.append(punkt)
 
         decyzja = input("Czy dodać kolejny? (t/n): ").lower()
@@ -36,7 +36,6 @@ def zbieranie_danych():
     zatwierdzenie = agenda[1].removeprefix("II. ")
     druga = agenda[1].removeprefix("III. ")
 
-    lista_zformatowana = "\n".join(lista)
     agenda_zformatowana = "\n".join(agenda)
 
     wynik = {
@@ -44,7 +43,7 @@ def zbieranie_danych():
         'data': data,
         'przewodniczący': przewodniczący,
         'protokolant': protokolant,
-        'lista': lista_zformatowana,
+        'lista': lista,
         'liczba': len(lista),
         'agenda': agenda_zformatowana,
         'zatwierdzenie': zatwierdzenie,

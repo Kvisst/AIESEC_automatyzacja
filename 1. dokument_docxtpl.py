@@ -1,7 +1,6 @@
 from docxtpl import DocxTemplate
 from zbieranie_danych import zbieranie_danych
 
-
 dane = zbieranie_danych()
 
 def generuj_protokol(sciezka_wejscia, sciezka_wyjscia, dane):
@@ -12,4 +11,4 @@ def generuj_protokol(sciezka_wejscia, sciezka_wyjscia, dane):
     print("Protokół został wygenerowany!")
 
 
-generuj_protokol('test.docx', 'test1.docx', dane)
+generuj_protokol('szablon.docx', 'protokół.docx', dane)

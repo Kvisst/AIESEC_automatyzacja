@@ -43,4 +43,4 @@ if __name__ == '__main__':
         '{agenda}': agenda_formatowana,
     }
 
-    wypelnianie('test.docx', 'test1.docx', dane)
+    wypelnianie('szablon.docx', 'test1.docx', dane)

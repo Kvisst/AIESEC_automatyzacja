@@ -1,5 +1,5 @@
 from docxtpl import DocxTemplate
-from zbieranie_danych import zbieranie_danych
+from Zbieranie_D import zbieranie_danych
 
 
 def przygotuj_dane(dane):
@@ -37,7 +37,6 @@ def generuj_protokol(sciezka_wejscia, sciezka_wyjscia, dane):
     dokument.save(sciezka_wyjscia)
 
 
-
 if __name__ == "__main__":
     dane = zbieranie_danych()
-    generuj_protokol('test.docx', 'test1.docx', dane)
+    generuj_protokol('testowy.docx', 'test1.docx', dane)
