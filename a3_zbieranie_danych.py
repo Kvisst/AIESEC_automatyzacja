@@ -1,12 +1,8 @@
 def zbierz_metadane():
-    print("Podaj datę zebrania: ")
-    data = input()
-    print("Podaj numer zebrania: ")
-    numer = input()
-    print("Kto będzie przewodniczącym?: ")
-    przewodniczący = input()
-    print("Kto będzie protokolantem?: ")
-    protokolant = input()
+    data = input("Podaj datę zebrania: ")
+    numer = input("Podaj numer zebrania: ")
+    przewodniczący = input("Kto będzie przewodniczącym?: ")
+    protokolant = input("Kto będzie protokolantem?: ")
 
     lista = []
     while True:
